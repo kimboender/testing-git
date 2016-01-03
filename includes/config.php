@@ -12,5 +12,5 @@ $aDbConfig = array(
 );
 
 // Omgeving vars
-$linkprefix = '/';
+$linkprefix = '';
 ?>
