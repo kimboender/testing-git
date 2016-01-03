@@ -1,0 +1,135 @@
+// 6 Column Grid 470px - 749px
+// -----------------------------------------------------------------------------
+// 
+// Span 1:    15.8333333333%
+// Span 2:    32.6666666667%
+// Span 3:    49.5%
+// Span 4:    66.3333333333%
+// Span 5:    83.1666666667%
+// Span 6:    100%
+// 
+// -----------------------------------------------------------------------------
+
+
+
+// Vaste vars
+//
+// Dit zijn de variabelen met de basisgegevens van dit breekpunt. Dit deel wordt in elk
+// breekpunt herhaald en bevat gegevens zoals tekstgrootte en regelhoogte.
+
+// Tekst
+@baseFontSize: 14px;
+@baseLineHeight: 1.6em;
+@baseLine: @baseFontSize * @baseLineHeight;
+
+// Koppen
+@h1FontSize: (@baseFontSize + 20px);
+@h2FontSize: (@baseFontSize + 16px);
+@h3FontSize: (@baseFontSize + 10px);
+
+// Border-radius
+@border-radius: 6px;
+
+// Marges
+@element-bottom-margin: 30px;
+
+// Paddings
+@element-top-padding: 30px;
+
+// Gridpak
+//
+// Hier begint het gridpak. Als eerst wordt de opbouw van de kolommen bepaald.
+.col {
+    margin-left:1%;
+    padding:0 2%;
+}
+
+.row .col:first-child {
+    margin-left:0;
+}
+
+// Kolommen
+//
+// Hier wordt bepaald welke breedte de kolommen in dit breekpunt hebben.
+.span_1,
+.smal,
+.zesde {
+    width:15.8333333333%;
+}
+
+.span_2,
+.derde {
+    width:32.6666666667%;
+}
+
+.span_3,
+.kwart {
+    width:49.5%;
+}
+
+.span_4,
+.tweederde {
+    width:66.3333333333%;
+}
+
+.span_5 {
+    width:83.1666666667%;
+}
+
+.span_6,
+.breed {
+    margin-left:0;
+    width:100%;
+}
+
+.row .smal:nth-child(7),
+.row .kwart:nth-child(3) {
+    margin-left: 0;
+}
+
+// HTML & Body
+body {
+    font-size: @baseFontSize;
+    line-height: @baseLineHeight;
+}
+
+// Headers
+h1 {
+    font-size: @h1FontSize;
+    line-height: @baseLineHeight;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: @h2FontSize;
+    line-height: @baseLineHeight;
+    margin-bottom: 6px;
+}
+
+h3 {
+    font-size: @h3FontSize;
+    line-height: @baseLineHeight;
+    margin-bottom: 4px;
+}
+
+// Basis tekstelementen
+p {
+    margin-bottom: 20px;
+}
+
+// Hyperlinks
+a, a:link, a:visited, a:hover, a:active {}
+a:hover {}
+
+// Lijsten
+ul, ol {
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+
+ol {}
+ul ul, ol ol, ul ol, ol ul {}
+
+// Formulier-elementen
+
+// Tabellen

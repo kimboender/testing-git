@@ -1,0 +1,142 @@
+:link,:visited { text-decoration:none }
+ul,ol { list-style:none }
+h1,h2,h3,h4,h5,h6,pre,code { font-size:1em; }
+ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input,dl,dt,dd
+{ margin:0; padding:0 }
+a img,:link img,:visited img { border:none }
+address { font-style:normal }
+*:focus { outline: none; }
+div.clear {width: 100%;height: 0px;font-size: 1px;line-height: 1px;clear: both;margin: 0;padding: 0;border: 0;background: transparent;}
+html{-webkit-text-size-adjust:none;}
+*,*:after,*:before {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 0;margin: 0;}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #6DD8C8;
+    color: #fff;
+    text-align: center;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+}
+
+/* Gezamelijke opbouw */
+div.melding {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+div.melding div.boven,
+div.melding div.onder {
+    display: table-row;
+    height: 50%;
+}
+
+div.melding div.boven div.inhoud,
+div.melding div.onder div.inhoud {
+    display: table-cell;
+    height: 50%;
+    width: 100%;
+}
+
+div.melding div.boven div.inhoud table,
+div.melding div.onder div.inhoud table {
+    text-align: center;
+    margin: 0 auto;
+    width: 900px;
+}
+
+/* .boven */
+div.melding div.boven {
+    background: #6CC6E3;
+}
+
+div.melding div.boven div.inhoud {
+    vertical-align: bottom;
+    padding: 0 15px 50px;
+}
+
+div.melding div.boven div.inhoud h1 {
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 40px;
+    max-width: 665px;
+    display: block;
+    margin: 0 auto 45px;
+}
+
+div.melding div.boven div.inhoud table {
+    width: 950px;
+}
+
+div.melding div.boven div.inhoud table tr {}
+
+div.melding div.boven div.inhoud table tr td {
+    width: 20%;
+    vertical-align: top;
+}
+
+div.melding div.boven div.inhoud table tr td a {
+    color: #fff;
+    text-decoration: none;
+}
+
+div.melding div.boven div.inhoud table tr td a img {
+    margin-bottom: 15px;
+}
+
+div.melding div.boven div.inhoud table tr td a span {
+    display: block;
+}
+
+div.melding div.boven div.inhoud table tr td a:hover span {
+    color: #E1F3F9;
+}
+
+div.melding div.boven div.inhoud table tr td a span.browser {
+    font-size: 20px;
+}
+
+div.melding div.boven div.inhoud table tr td a span.vendor {
+    font-size: 17px;
+}
+
+/* .onder */
+div.melding div.onder {}
+
+div.melding div.onder div.inhoud {
+    vertical-align: top;
+    padding: 50px 15px 0;
+}
+
+div.melding div.onder div.inhoud h2 {
+    color: #E1F7F4;
+    font-size: 26px;
+    line-height: 40px;
+    max-width: 665px;
+    display: block;
+    margin: 0 auto 40px;
+}
+
+div.melding div.onder div.inhoud table {}
+div.melding div.onder div.inhoud table tr {}
+
+div.melding div.onder div.inhoud table tr td {
+    width: 25%;
+    vertical-align: top;
+    font-size: 13px;
+    line-height: 23px;
+    padding: 0 10px;
+}
+
+div.melding div.onder div.inhoud table tr td h3 {
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+div.melding div.onder div.inhoud table tr td img {
+    margin-bottom: 15px;
+}

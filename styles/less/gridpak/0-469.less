@@ -1,0 +1,115 @@
+// 2 Column Grid 0px - 469px
+// -----------------------------------------------------------------------------
+// 
+// Span 1:    49.5%
+// Span 2:    100%
+// 
+// -----------------------------------------------------------------------------
+
+// Vaste vars
+//
+// Dit zijn de variabelen met de basisgegevens van dit breekpunt. Dit deel wordt in elk
+// breekpunt herhaald en bevat gegevens zoals tekstgrootte en regelhoogte.
+
+
+
+// Tekst
+@baseFontSize: 13px;
+@baseLineHeight: 1.6em;
+@baseLine: @baseFontSize * @baseLineHeight;
+
+// Koppen
+@h1FontSize: (@baseFontSize + 20px);
+@h2FontSize: (@baseFontSize + 16px);
+@h3FontSize: (@baseFontSize + 10px);
+
+// Border-radius
+@border-radius: 5px;
+
+// Marges
+@element-bottom-margin: 25px;
+
+// Paddings
+@element-top-padding: 25px;
+
+// Gridpak
+//
+// Hier begint het gridpak. Als eerst wordt de opbouw van de kolommen bepaald.
+.col {
+    margin-left:1%;
+    padding:0 3%;
+}
+
+.row .col:first-child {
+    margin-left:0;
+}
+
+// Kolommen
+//
+// Hier wordt bepaald welke breedte de kolommen in dit breekpunt hebben.
+.span_1,
+.smal,
+.kwart {
+    width:49.5%;
+}
+
+.span_2,
+.zesde,
+.derde,
+.tweederde,
+.breed {
+    margin-left:0;
+    width:100%;
+}
+
+.row .smal:nth-child(2n+1),
+.row .kwart:nth-child(3) {
+    margin-left: 0;
+}
+
+// HTML & Body
+body {
+    font-size: @baseFontSize;
+    line-height: @baseLineHeight;
+}
+
+// Headers
+h1 {
+    font-size: @h1FontSize;
+    line-height: @baseLineHeight;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: @h2FontSize;
+    line-height: @baseLineHeight;
+    margin-bottom: 6px;
+}
+
+h3 {
+    font-size: @h3FontSize;
+    line-height: @baseLineHeight;
+    margin-bottom: 4px;
+}
+
+// Basis tekstelementen
+p {
+    margin-bottom: 20px;
+}
+
+// Hyperlinks
+a, a:link, a:visited, a:hover, a:active {}
+a:hover {}
+
+// Lijsten
+ul, ol {
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+
+ol {}
+ul ul, ol ol, ul ol, ol ul {}
+
+// Formulier-elementen
+
+// Tabellen

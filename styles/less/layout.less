@@ -1,0 +1,250 @@
+/**
+    Vaste vars
+*/
+
+// Font
+@baseFontFamily: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@headingsFontFamily: @baseFontFamily;
+@controlsFontFamily: @baseFontFamily;
+
+// Base color
+@backgroundBody: white;
+@colorBody: #333;
+@colorHeadings: #222;
+
+// Colors
+@colorBlack: #0f0f0f;
+@colorBlue: #3d58a8;
+@colorRed: #d70a16;
+@colorGreen: #159776;
+@colorYellow: #fddc43;
+
+// LinkColor
+@colorLink: blue;
+@colorLinkHover: green;
+
+// paden
+@imagePathLayout: '../images/layout';
+// schrijf als (background-image: url('@{imagePathLayout}/bg_popup.png'))
+
+// Volgende regels halen de lelijke highlights weg op tap in tablets en telefoons
+* { 
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+/**
+    HTML & Body
+*/
+body {
+    background: @backgroundBody;
+    color: @colorBody;
+    font-family: @baseFontFamily;
+}
+
+/**
+    Headers
+*/
+h1, h2, h3, h4, h5, h6{
+    color: @colorHeadings;
+    font-weight: bold;
+}
+
+/**
+    Basis tekstelementen
+*/
+
+p {}
+
+/**
+    Hyperlinks
+*/
+
+a, a:link, a:visited, a:hover, a:active {
+    text-decoration: underline;
+    color: @colorLink;
+}
+
+a:hover {
+    text-decoration: none;
+    color: @colorLinkHover;
+}
+
+/**
+    Lijsten
+*/
+ul, ol {
+	list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+ul, ol {
+	& & {
+		margin-bottom: 0;
+	}
+}
+
+/**
+    Formulier-elementen
+*/
+
+/**
+    Tabellen
+*/
+table {
+	border: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+	
+	thead {
+    	tr {
+        	th {
+                vertical-align: top;
+                text-align: left;            	
+        	}
+    	}
+	}
+	
+	tbody {
+    	tr {
+        	td {
+                vertical-align: top;
+                text-align: left;
+        	}
+    	}
+	}
+}
+
+/**
+	Foutmelding, feedback en mededeling
+*/
+div.fout, div.feedback, div.mededeling {
+    display: block;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	
+	ul {
+    	margin: 15px 0 0 0;
+    }
+}
+
+div.fout {
+	background: #F2DEDE;
+	color: #B84A47;
+	
+    a {
+	    color: #B84A47;
+	}
+}
+
+div.feedback {
+	background: #DFF780;
+	color: #8CAA1D;
+	
+	a {
+    	color: #8CAA1D;
+	}
+}
+
+div.mededeling {
+	background: #ffffb2;
+	color: #CC6600;
+	
+	a{
+    	color: #CC6600;
+	}
+}
+
+/**
+    Classes om afbeeldingen rechts of links uit te lijnen (CKeditor)
+*/
+.afbeelding_links{
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.afbeelding_rechts{
+    float: right;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+/**
+    Deze styles zijn als test om de gridpak te tonen binnen de skeleton en mogen
+    verwijderd worden.
+*/
+.col {
+    min-height: 50px;
+}
+
+.breed {
+    background: yellow
+}
+
+.kwart {
+    background: red
+}
+
+.derde {
+    background: blue
+}
+
+.smal {
+    background: green
+}
+
+.zesde {
+    .gradient(darkblue,blue);
+    color: #fff;
+}
+
+.tweederde {
+    background: aqua
+}
+
+.tekst {
+    background: #e1e1e1;
+}
+
+//test voor less-functie lighten
+.een{
+    background: @colorBody;
+    color: @backgroundBody;
+}
+
+.twee{
+    background: lighten(@colorBody,10%);
+    color: @backgroundBody;
+}
+
+.drie{
+    background: lighten(@colorBody,20%);
+    color: @backgroundBody;
+}
+
+.vier{
+    background: lighten(@colorBody,30%);
+}
+
+.vijf{
+    background: lighten(@colorBody,40%);
+}
+
+.zes{
+    background: lighten(@colorBody,50%);
+}
+
+//hovers met less-functie darken
+.hover{
+    background: @colorGreen;
+}
+
+.hover:hover{
+    background: darken(@colorGreen, 5%);
+}
