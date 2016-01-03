@@ -12,7 +12,7 @@ include('includes/config.php');
     </head>
     <body>
         
-        <h1>Het komt allemaal samen nu..</h1>
+        <h1>Het komt allemaal samen nu.. Of toch niet?</h1>
 
         <script type="text/javascript">
             var linkprefix = '<?php echo $linkprefix; ?>';
